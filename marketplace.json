@@ -12,7 +12,7 @@
       "name": "oolio-pm",
       "source": "./oolio-pm",
       "description": "Oolio Product Management. The Virtual Product Council (convene-vpc + operator/design/leadership/STORM subcommittees and persona library), the JPD grooming loop (jpd-loop) and idea groomer (jpd-idea-groomer), and the Jira epic helpers (jira-epic-groomer, jira-epic-titler).",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "author": {
         "name": "Niel Cody, Oolio Product"
       }
