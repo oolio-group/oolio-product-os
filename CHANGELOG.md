@@ -4,6 +4,13 @@ All notable changes to the **oolio-pm** plugin, newest first. The version here m
 
 Versioning: last number = fix or wording, middle = new ability or skill, first = a big change to how the plugin is used.
 
+## 0.3.3 — 2026-07-01
+
+Docs: repo renamed and made public.
+
+- The GitHub repo was renamed `oolio-pm-plugins` → `oolio-pm-plugin` (singular) and set to public. Updated the install URL to the singular name and dropped the org-access prerequisite in the README and PUBLISHING, since a public repo installs without GitHub org membership.
+- Noted in the README that the repo is intentionally public and bundles Oolio-internal material.
+
 ## 0.3.2 — 2026-07-01
 
 Fix: marketplace manifest location.

@@ -1,4 +1,4 @@
-# Maintaining oolio-pm-plugins
+# Maintaining oolio-pm-plugin
 
 Rules for anyone (human or AI) changing this repo. This is the **oolio-pm** plugin collection for Cowork. Read [README.md](README.md) for what it is and [PUBLISHING.md](PUBLISHING.md) for how it ships. House style everywhere: British English, no em dashes, no buzzwords.
 

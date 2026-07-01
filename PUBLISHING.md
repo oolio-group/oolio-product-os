@@ -6,7 +6,7 @@ This is the whole workflow for editing the **oolio-pm** plugin and getting a new
 - **GitHub Desktop publishes** — an app with buttons that sends your changes to GitHub.
 - **Your team pulls** — installs once, then gets updates.
 
-GitHub repo (the home of this collection): `oolio-group/oolio-pm-plugins` (private).
+GitHub repo (the home of this collection): `oolio-group/oolio-pm-plugin` (public).
 
 ---
 
@@ -25,13 +25,13 @@ GitHub repo (the home of this collection): `oolio-group/oolio-pm-plugins` (priva
 
 ### A3. Publish it to GitHub
 1. Click the blue **Publish repository** button (top right).
-2. **Untick** "Keep this code private"? No — leave it **ticked / private**.
+2. Leave **"Keep this code private"** unticked, so the repo is **public** and teammates can install without GitHub org access.
 3. Set the owner to **oolio-group** if offered; otherwise your own account is fine for now.
-4. Make sure the name is **oolio-pm-plugins**. Click **Publish repository**.
+4. Make sure the name is **oolio-pm-plugin**. Click **Publish repository**.
 
 ### A4. Connect it to Cowork
 1. In Cowork: **Settings → Plugins → Add plugin → GitHub** (Organization settings if you have them).
-2. Enter `oolio-group/oolio-pm-plugins` (or `your-username/oolio-pm-plugins` if you published to your own account).
+2. Enter `oolio-group/oolio-pm-plugin` (or `your-username/oolio-pm-plugin` if you published to your own account).
 3. Install **oolio-pm**.
 
 That's the collection live. From now on you only do Part B.
@@ -71,7 +71,7 @@ That's it. Steps 1–4 every release.
 ## C. How a teammate installs it (first time, on their machine)
 
 1. Cowork → **Settings → Plugins → Add plugin → GitHub**.
-2. Enter `oolio-group/oolio-pm-plugins`.
+2. Enter `oolio-group/oolio-pm-plugin`.
 3. Install **oolio-pm**. Done — all nine skills appear.
 
 Every version you push then shows up as an available update for them.
