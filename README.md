@@ -4,7 +4,7 @@ The Product team's plugin collection (marketplace) for Cowork. Other Oolio teams
 
 ## Plugins
 
-- **oolio-pm** — Oolio Product Management. Bundles the Virtual Product Council (convene-vpc and its operator, design, leadership, and STORM subcommittees, plus a snapshot of the persona library), the JPD grooming loop (jpd-loop) and idea groomer (jpd-idea-groomer), and the Jira epic helpers (jira-epic-groomer, jira-epic-titler). Self-contained.
+- **oolio-pm** — Oolio Product Management. Bundles the Virtual Product Council (convene-vpc and its operator, design, leadership, and STORM subcommittees, plus a snapshot of the persona library), the JPD grooming loop (jpd-loop) and idea groomer (jpd-idea-groomer), the Jira epic helpers (jira-epic-groomer, jira-epic-titler), and grill-me for stress-testing a plan or decision. Self-contained.
 
 ## Install in Cowork (for Oolio teammates)
 
@@ -36,7 +36,7 @@ oolio-pm-plugin/
     ├── .claude-plugin/plugin.json
     ├── personas-library/   bundled persona-library snapshot
     ├── _archive/           retired skills, lenses, and templates (kept for reference)
-    └── skills/             the 9 skills
+    └── skills/             the 10 skills
 ```
 
 ## Updating
