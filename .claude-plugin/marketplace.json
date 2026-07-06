@@ -12,7 +12,7 @@
       "name": "oolio-pm",
       "source": "./oolio-pm",
       "description": "Oolio Product Management. The full PM toolkit: the Virtual Product Council (convene-vpc + operator/design/leadership/STORM subcommittees and persona library), discovery (feedback-to-idea, jpd-loop, jpd-idea-groomer, jpd-title-standard), definition (write-prd, grill-my-prd, grill-me), Jira helpers (jira-epic-groomer, jira-epic-titler), launch (gtm-handover, gtm-playbooks, gtm-marketing), and decision support (steering-pack, metrics-review).",
-      "version": "0.9.1",
+      "version": "0.9.2",
       "author": {
         "name": "Niel Cody, Oolio Product"
       }

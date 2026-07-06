@@ -4,6 +4,14 @@ All notable changes to the **oolio-pm** plugin, newest first. The version here m
 
 Versioning: last number = fix or wording, middle = new ability or skill, first = a big change to how the plugin is used.
 
+## 0.9.2 — 2026-07-07
+
+Docs: the Cowork stale-cache issue is now documented for teammates.
+
+- New evidence narrowed the diagnosis: Cowork's backend caches one snapshot per source slug, taken when the marketplace is first added, and never refreshes it (the singular slug is frozen at 0.3.3 from the rename day; the plural slug at 0.5.0 from the day it was first tried). The scheduled re-sync assumed earlier does not happen.
+- Added a "Known issue — Cowork can serve a stale version" section to PUBLISHING.md with the check (CHANGELOG on GitHub is the truth) and the recovery steps (Update button, then the unused slug, then Anthropic support), and a pointer in the README install section.
+- The durable fix sits with Anthropic's backend; a bug report is being raised. Nothing in this repo can force their cache to refresh.
+
 ## 0.9.1 — 2026-07-07
 
 Cache-bust: marketplace identity renamed to unstick Cowork's stale sync.

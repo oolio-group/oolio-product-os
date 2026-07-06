@@ -1,6 +1,6 @@
 {
   "name": "oolio-pm",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "Oolio Product Management. The full PM toolkit, signal to shipped: intake raw feedback into JPD (feedback-to-idea), groom ideas to standard (jpd-idea-groomer, jpd-title-standard, jpd-loop), write and pressure-test PRDs (write-prd, grill-my-prd, grill-me), validate decisions against the Virtual Product Council and its persona library (convene-vpc + operator/design/leadership subcommittees, storm-research), keep Jira tidy (jira-epic-groomer, jira-epic-titler), prepare Steering (steering-pack), ship the GTM pack (gtm-handover, gtm-playbooks, gtm-marketing), and measure the result (metrics-review).",
   "author": {
     "name": "Niel Cody, Oolio Product"

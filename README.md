@@ -22,6 +22,8 @@ The plugin's skills then appear in your skill list (for example, ask "convene th
 
 > Note: the exact menu wording in Cowork may differ slightly from the steps above. The first teammate to install should confirm the real path and tell Niel, so this section can be corrected.
 
+> **If the installed version looks old:** Cowork caches this repo server-side and can serve a stale snapshot. The real current version is always the top entry of [CHANGELOG.md](CHANGELOG.md). Fix steps are in [PUBLISHING.md](PUBLISHING.md) under "Known issue".
+
 ## Layout
 
 ```

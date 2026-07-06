@@ -66,6 +66,16 @@ Message them: *"oolio-pm v0.2.0 is out."* Their Cowork syncs and offers the upda
 
 That's it. Steps 1–4 every release.
 
+### Known issue — Cowork can serve a stale version
+
+Cowork's backend caches a snapshot of this repo per source URL, and as of July 2026 that snapshot is taken **once, when the marketplace is first added, and does not refresh on its own**. Remove-and-re-add reuses the same cached record. GitHub always serves the latest (check the real version any time at https://github.com/oolio-group/oolio-pm-plugin/blob/main/CHANGELOG.md).
+
+If Cowork shows an older version than the CHANGELOG:
+
+1. Open the plugin in **Settings → Plugins** and press **Update**.
+2. If that does nothing, remove the marketplace and re-add it under the slug you have NOT used before — both `oolio-group/oolio-pm-plugin` and `oolio-group/oolio-pm-plugins` point at the same repo (GitHub redirects), but Cowork caches them separately, and a never-used slug fetches today's HEAD.
+3. If both slugs are burnt, the fix sits with Anthropic (bug report filed; see the CHANGELOG for status). Do not judge the repo by what Cowork shows.
+
 ---
 
 ## C. How a teammate installs it (first time, on their machine)
