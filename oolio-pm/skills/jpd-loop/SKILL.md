@@ -94,6 +94,8 @@ Present a concise summary: verdict, rubric, top objections, the Insight list, li
 4. **Notify the reporter** (see Step 7a).
 5. Set `VPC Loop State = Done (Decision)`, `VPC Reviewed = 1`, then move `Exploring → Decision`.
 
+**If a write-back step fails partway.** The five outputs above are ordered so the most important land first. If a step fails (a write is rejected, a page create errors, a field is not writable), do not unwind what already succeeded and do not silently skip the rest: complete the remaining steps that can still run, then report exactly which steps landed and which did not, with the error, so the human can finish by hand. Never leave the run looking complete when it is partial, and never retry a failed write blind; re-check the payload (labels, formats) against `references/field-map.md` first.
+
 ### 7a. Reporter update (on Proceed/approved)
 Add a Jira comment on the idea that @mentions the reporter, written in **product-team
 voice**. Hard rule: it must read as work done and researched by the real product team and

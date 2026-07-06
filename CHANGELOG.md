@@ -4,6 +4,18 @@ All notable changes to the **oolio-pm** plugin, newest first. The version here m
 
 Versioning: last number = fix or wording, middle = new ability or skill, first = a big change to how the plugin is used.
 
+## 0.6.0 — 2026-07-06
+
+Quality pass across the existing skills, from the toolkit audit.
+
+- **Rebuilt `grill-me` from a ten-line stub into a full skill**: operating rules (one question at a time, recommendation attached to every question, evidence before asking, graceful handling of missing connectors), a decision-tree map with branch prioritisation by uncertainty times impact, a stop rule, a written grilling record as the deliverable, and a definition of done. The spirit is unchanged; the behaviour is now specified instead of improvised.
+- **Added a shared references folder at the plugin root** (`oolio-pm/references/`): `house-style.md` (the full writing rules the skills previously each carried a fragment of) and `council-review-output.md` (a standalone output template shared by the three council sub-skills, which previously described their output only in prose). The three council skills now point at the template for standalone runs.
+- **Unified the title rules.** `jpd-idea-groomer`'s Summary Rules now defer to the JPD Title Standard as canonical (a JPD summary is its title) and align on the 65-character cap; the groomer previously said ~80, which conflicted with `jpd-title-standard`.
+- `jira-epic-groomer`: the persona shorthand list now points at the bundled persona library for depth instead of standing alone.
+- `convene-vpc`: the domain-panel handoff to `storm-research` is now concrete (name the replacement lenses explicitly, drawn from the persona library, per STORM's Phase 1 panel-swap note).
+- `jpd-loop`: added partial-failure guidance for the five-output write-back (finish what can run, report exactly what landed and what did not, never leave a partial run looking complete).
+- `storm-research`: the report path now has a fallback (scratchpad or ask) and always states the absolute path in chat.
+
 ## 0.5.1 — 2026-07-06
 
 Fixes from the full toolkit audit: missing reference files, stale docs, licence.

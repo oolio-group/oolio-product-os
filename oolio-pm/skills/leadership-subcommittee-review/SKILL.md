@@ -28,7 +28,7 @@ Add conditional lenses only when the decision touches their ground: Head of Sale
 
 ## What you hand back
 
-Each convened seat's verdict and required changes. The strongest commercial clashes. Whether the direction is worth investing in, and what must be true before it moves. Hand this to `convene-vpc` for adjudication, or present it directly if run standalone.
+Each convened seat's verdict and required changes. The strongest commercial clashes. Whether the direction is worth investing in, and what must be true before it moves. Hand this to `convene-vpc` for adjudication. If run standalone, present it in the shared council output template at `${CLAUDE_PLUGIN_ROOT}/references/council-review-output.md`.
 
 You do not edit the PRD or write to any Confluence page yourself. You return findings. Only the Chair records, and only by the non-destructive Confluence write protocol (never delete, mark and date edits, child Decision Log page, locked decisions as a decision list).
 

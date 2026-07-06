@@ -145,11 +145,14 @@ If the user picks one summary option, write only that one back. If the user says
 
 ## Summary Rules
 
+The canonical rule set for JPD summaries is the **JPD Title Standard**, enforced by the sibling skill `jpd-title-standard` (a JPD idea's summary is its title). Its full rules and the objective validator (`../jpd-title-standard/scripts/check_titles.py`) are the source of truth; the essentials repeated here must never drift from it.
+
 **Format (non-negotiable):** `[Action / Capability] + [Outcome / Value]`
 
 **Constraints:**
 
-- Target 6–12 words. Hard cap ~80 characters — Jira truncates aggressively in boards and lists.
+- **Max 65 characters, target 40–55** (the Title Standard's budget; Tree cards truncate near 58–62 on desktop and ~40 on mobile). Count, don't estimate.
+- Sentence case: capitalise the first word and proper nouns/product names only (POS, QR, Online Store). No emoji, no bracket or pipe prefixes, no trailing punctuation.
 - Lead with the capability or change, not the user. "As a venue manager I want…" is a delivery story, not a JPD summary.
 - **Banned generic verbs**: Improve, Enhance, Fix, Support, Better. They signal weak thinking and hide what's changing. Replace with the actual capability — "Real-time stock sync", "Auto-routing orders", "Configurable margin bands".
 - **Outcome is mandatory.** A summary without an outcome is a noun, not a decision input — and Steering can't prioritise it.

@@ -72,7 +72,7 @@ This map is not a separate deliverable. It is the raw material for the report's 
    - **Claim safety guide** — assert / caveat / avoid, populated after Phase 4 verification.
    - **Frontier question** — the one question that would change everything.
    - **References** — every citation with a verification-status tag (set in Phase 4).
-3. Write to `storm-reports/{topic-slug}-briefing.html` (relative to the current working directory; create the folder if needed).
+3. Write to `storm-reports/{topic-slug}-briefing.html` (relative to the current working directory; create the folder if needed). If the working directory is unclear or not a sensible home for reports (for example a system folder), use the session's scratchpad or ask the user where to save, and always state the absolute path in chat so the file is findable afterwards.
 
 ## Phase 4: Adversarial peer review + verification (do not skip)
 

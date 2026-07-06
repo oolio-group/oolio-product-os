@@ -36,6 +36,7 @@ oolio-pm-plugins/           local folder name; the GitHub repo is oolio-group/oo
 └── oolio-pm/               the plugin
     ├── .claude-plugin/plugin.json
     ├── personas-library/   bundled persona-library snapshot
+    ├── references/         shared references (house style, council output template)
     ├── _archive/           retired skills, lenses, and templates (kept for reference)
     └── skills/             the skills (count in oolio-pm/README.md)
 ```

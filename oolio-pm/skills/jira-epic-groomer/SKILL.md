@@ -135,6 +135,8 @@ Style:
 
 For Oolio epics, lean on the standard operator personas. Pick two or three that genuinely benefit. Don't list every persona to look thorough. If only one persona benefits, only list one.
 
+The names below are epic-description shorthand for the full persona library bundled with this plugin (`${CLAUDE_PLUGIN_ROOT}/personas-library/`, indexed in `personas.md`). When you need more than a name (what the persona actually does, cares about, or would reject), read the relevant persona file rather than guessing.
+
 * **Single-venue operator / owner-operator.** Runs one venue. Hands-on. Cares about cash and margin.
 * **Multi-venue operations manager.** Runs several sites. Needs comparison and rollup. Spots outliers.
 * **F&B lead / Executive chef.** Owns menu and recipe profitability, modifier strategy, and ingredient costs.
