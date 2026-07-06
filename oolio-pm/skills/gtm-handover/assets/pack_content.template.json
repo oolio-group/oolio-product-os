@@ -1,0 +1,231 @@
+{
+  "product": {
+    "name": "[Product Name]",
+    "tagline_long": "[GAP]",
+    "owner_pm": { "name": "[GAP]", "email": "[GAP]" },
+    "gtm_partner": { "name": "[GAP]", "email": "[GAP]" },
+    "version": "v0.1",
+    "last_reviewed": "[GAP]",
+    "anchor_jira_epic": "[GAP]",
+    "linked_confluence": "[GAP]"
+  },
+  "one_pager": {
+    "tagline": "[GAP]",
+    "what": "[GAP]",
+    "who": "[GAP]",
+    "problem": "[GAP]",
+    "outcome": "[GAP]",
+    "proof": "[TBC]"
+  },
+  "deck": {
+    "problem": {
+      "quote": "[GAP]",
+      "context_bullets": ["[GAP]", "[GAP]", "[GAP]"]
+    },
+    "pov": {
+      "big_idea": "[GAP]",
+      "supporting": "[GAP]"
+    },
+    "icp": {
+      "segments": [
+        { "name": "[GAP]", "detail": "[GAP]" },
+        { "name": "[GAP]", "detail": "[GAP]" },
+        { "name": "[GAP]", "detail": "[GAP]" }
+      ],
+      "personas": [
+        { "name": "[GAP]", "detail": "[GAP]" },
+        { "name": "[GAP]", "detail": "[GAP]" },
+        { "name": "[GAP]", "detail": "[GAP]" }
+      ]
+    },
+    "capabilities": [
+      { "name": "[GAP]", "description": "[GAP]" },
+      { "name": "[GAP]", "description": "[GAP]" },
+      { "name": "[GAP]", "description": "[GAP]" },
+      { "name": "[GAP]", "description": "[GAP]" }
+    ],
+    "value_prop": [
+      { "pain": "[GAP]", "feature": "[GAP]", "outcome": "[GAP]", "impact": "[GAP]" },
+      { "pain": "[GAP]", "feature": "[GAP]", "outcome": "[GAP]", "impact": "[GAP]" },
+      { "pain": "[GAP]", "feature": "[GAP]", "outcome": "[GAP]", "impact": "[GAP]" }
+    ],
+    "competitive": {
+      "where_we_compete": "[GAP]",
+      "where_we_win": "[GAP]",
+      "where_we_dont": "[GAP]"
+    },
+    "proof": {
+      "stats": [
+        { "value": "[TBC]", "label": "[GAP]" },
+        { "value": "[TBC]", "label": "[GAP]" },
+        { "value": "[TBC]", "label": "[GAP]" }
+      ],
+      "case_studies": [
+        { "customer": "[TBC]", "story": "[GAP]" },
+        { "customer": "[TBC]", "story": "[GAP]" }
+      ]
+    },
+    "buy_steps": [
+      { "name": "DISCOVERY",  "description": "[GAP]" },
+      { "name": "DEMO",       "description": "[GAP]" },
+      { "name": "CONTRACT",   "description": "[GAP]" },
+      { "name": "ONBOARDING", "description": "[GAP]" },
+      { "name": "GO LIVE",    "description": "[GAP]" }
+    ],
+    "summary": {
+      "takeaway": "[GAP]",
+      "next_steps": [
+        { "action": "[GAP]", "owner": "[GAP]", "due": "[GAP]" },
+        { "action": "[GAP]", "owner": "[GAP]", "due": "[GAP]" },
+        { "action": "[GAP]", "owner": "[GAP]", "due": "[GAP]" }
+      ]
+    },
+    "back_cover": {
+      "promise": "[GAP]",
+      "contacts": [
+        { "role": "Product Manager", "name": "[GAP]", "email": "[GAP]" },
+        { "role": "Account Director", "name": "[GAP]", "email": "[GAP]" },
+        { "role": "GTM partner", "name": "[GAP]", "email": "[GAP]" }
+      ]
+    }
+  },
+  "sales": {
+    "summary": "[GAP]",
+    "discovery_questions": ["[GAP]", "[GAP]", "[GAP]", "[GAP]", "[GAP]"],
+    "qualification": [
+      { "criterion": "Segment", "qualified_in": "[GAP]", "qualified_out": "[GAP]" },
+      { "criterion": "Venue size", "qualified_in": "[GAP]", "qualified_out": "[GAP]" },
+      { "criterion": "Tech stack", "qualified_in": "[GAP]", "qualified_out": "[GAP]" },
+      { "criterion": "Pain severity", "qualified_in": "[GAP]", "qualified_out": "[GAP]" },
+      { "criterion": "Decision authority", "qualified_in": "[GAP]", "qualified_out": "[GAP]" }
+    ],
+    "demo_steps": [
+      { "step": "Set the scene", "minutes": 2, "what_to_show": "[GAP]", "talk_track": "[GAP]" },
+      { "step": "Moment of value", "minutes": 5, "what_to_show": "[GAP]", "talk_track": "[GAP]" },
+      { "step": "Core flow", "minutes": 10, "what_to_show": "[GAP]", "talk_track": "[GAP]" },
+      { "step": "Integration story", "minutes": 5, "what_to_show": "[GAP]", "talk_track": "[GAP]" },
+      { "step": "Land the close", "minutes": 3, "what_to_show": "[GAP]", "talk_track": "[GAP]" }
+    ],
+    "objections": [
+      { "objection": "[GAP]", "response": "[GAP]" },
+      { "objection": "[GAP]", "response": "[GAP]" },
+      { "objection": "[GAP]", "response": "[GAP]" },
+      { "objection": "[GAP]", "response": "[GAP]" },
+      { "objection": "[GAP]", "response": "[GAP]" }
+    ],
+    "pricing": {
+      "packages": [
+        { "name": "[GAP]", "for": "[GAP]", "includes": "[GAP]", "headline_price": "[GAP]" }
+      ],
+      "discount_authority": "[GAP]",
+      "source_of_truth": "[GAP]"
+    },
+    "close_motion": "[GAP]",
+    "handover_checklist": ["[GAP]", "[GAP]", "[GAP]", "[GAP]", "[GAP]"]
+  },
+  "am": {
+    "summary": "[GAP]",
+    "healthy_at_90d": "[GAP]",
+    "adoption_signals": [
+      { "feature": "[GAP]", "healthy": "[GAP]", "red_flag": "[GAP]" }
+    ],
+    "expansion_triggers": [
+      { "trigger": "[GAP]", "next_product": "[GAP]", "talk_track": "[GAP]" }
+    ],
+    "renewal_timeline": [
+      { "checkpoint": "T-12 months", "action": "[GAP]" },
+      { "checkpoint": "T-9 months",  "action": "[GAP]" },
+      { "checkpoint": "T-6 months",  "action": "[GAP]" },
+      { "checkpoint": "T-3 months",  "action": "[GAP]" }
+    ],
+    "renewal_artifacts": ["[GAP]", "[GAP]", "[GAP]"],
+    "at_risk_triggers": ["[GAP]", "[GAP]", "[GAP]", "[GAP]"],
+    "recovery_sequence": [
+      { "step": "Within 48 hours", "action": "[GAP]" },
+      { "step": "Within 1 week", "action": "[GAP]" },
+      { "step": "Weekly check-ins for 30 days", "action": "[GAP]" },
+      { "step": "Day 30 status check", "action": "[GAP]" }
+    ],
+    "qbr_sections": [
+      "Recap of last quarter goals",
+      "Adoption and outcome metrics",
+      "Wins, learnings and friction points",
+      "Roadmap preview tied to their goals",
+      "Goals for next quarter, agreed in the room",
+      "Open actions and owners"
+    ]
+  },
+  "onboarding": {
+    "definition_of_done": ["[GAP]", "[GAP]", "[GAP]"],
+    "config_checklist": [
+      { "step": "[GAP]", "owner": "[GAP]", "due": "[GAP]" }
+    ],
+    "migration": {
+      "in_scope": [
+        { "domain": "[GAP]", "source": "[GAP]", "record_count": "[GAP]", "owner": "[GAP]" }
+      ],
+      "mapping_decisions": "[GAP]",
+      "validation": ["[GAP]", "[GAP]", "[GAP]"]
+    },
+    "training": {
+      "manager": ["[GAP]", "[GAP]", "[GAP]"],
+      "frontline": ["[GAP]", "[GAP]"],
+      "materials": ["Quick reference card", "Video walkthroughs", "Help Centre articles"]
+    },
+    "golive": {
+      "preflight": ["[GAP]", "[GAP]", "[GAP]", "[GAP]"],
+      "cutover": [
+        { "step": "[GAP]", "owner": "[GAP]", "eta": "[GAP]" }
+      ],
+      "postlive": ["[GAP]", "[GAP]", "[GAP]"]
+    },
+    "healthcheck": [
+      { "check": "Throughput / volume", "pass": "[GAP]", "fail_action": "[GAP]" },
+      { "check": "Error rate", "pass": "[GAP]", "fail_action": "[GAP]" },
+      { "check": "Staff confidence", "pass": "[GAP]", "fail_action": "[GAP]" },
+      { "check": "Customer feedback", "pass": "[GAP]", "fail_action": "[GAP]" },
+      { "check": "Open tickets", "pass": "[GAP]", "fail_action": "[GAP]" }
+    ],
+    "handover": [
+      "Onboarding lead writes a 1-page handover.",
+      "15 minute handover call between Onboarding lead and AM.",
+      "AM books first 30-day check-in within 1 week."
+    ]
+  },
+  "marketing": {
+    "tier": 2,
+    "launch": {
+      "linkedin_long": "[GAP]",
+      "linkedin_short": "[GAP]",
+      "partner_channel": "[GAP]"
+    },
+    "social_posts": [
+      { "body": "[GAP]", "visual": "[GAP]" },
+      { "body": "[GAP]", "visual": "[GAP]" },
+      { "body": "[GAP]", "visual": "[GAP]" }
+    ],
+    "emails": {
+      "prospect": [
+        { "subject": "[GAP]", "preheader": "[GAP]", "body": "[GAP]", "cta": "[GAP]" },
+        { "subject": "[GAP]", "preheader": "[GAP]", "body": "[GAP]", "cta": "[GAP]" },
+        { "subject": "[GAP]", "preheader": "[GAP]", "body": "[GAP]", "cta": "[GAP]" }
+      ],
+      "customer": [
+        { "subject": "[GAP]", "preheader": "[GAP]", "body": "[GAP]", "cta": "[GAP]" },
+        { "subject": "[GAP]", "preheader": "[GAP]", "body": "[GAP]", "cta": "[GAP]" }
+      ]
+    },
+    "enablement_note": "[GAP]",
+    "campaign_brief": {
+      "name": "[GAP]",
+      "objective": "[GAP]",
+      "audience": "[GAP]",
+      "headline_message": "[GAP]",
+      "channels": ["[GAP]"],
+      "budget": "[GAP]",
+      "run_dates": "[GAP]",
+      "success_metric": "[GAP]",
+      "owner": "[GAP]"
+    }
+  }
+}

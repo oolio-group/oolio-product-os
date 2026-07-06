@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__8126b7d3-4894-4910-ae0f-c77498bb5a96__getConfluencePage",
+      "mcp__8126b7d3-4894-4910-ae0f-c77498bb5a96__getJiraIssue",
+      "mcp__8126b7d3-4894-4910-ae0f-c77498bb5a96__searchJiraIssuesUsingJql",
+      "mcp__8126b7d3-4894-4910-ae0f-c77498bb5a96__searchConfluenceUsingCql",
+      "mcp__8126b7d3-4894-4910-ae0f-c77498bb5a96__search",
+      "mcp__8126b7d3-4894-4910-ae0f-c77498bb5a96__getAccessibleAtlassianResources",
+      "mcp__8126b7d3-4894-4910-ae0f-c77498bb5a96__getJiraProjectIssueTypesMetadata",
+      "mcp__8126b7d3-4894-4910-ae0f-c77498bb5a96__getJiraIssueTypeMetaWithFields",
+      "mcp__8126b7d3-4894-4910-ae0f-c77498bb5a96__getVisibleJiraProjects",
+      "mcp__8126b7d3-4894-4910-ae0f-c77498bb5a96__getConfluenceSpaces",
+      "mcp__8126b7d3-4894-4910-ae0f-c77498bb5a96__getConfluencePageDescendants",
+      "mcp__8126b7d3-4894-4910-ae0f-c77498bb5a96__getTransitionsForJiraIssue",
+      "mcp__8126b7d3-4894-4910-ae0f-c77498bb5a96__lookupJiraAccountId"
+    ]
+  }
+}

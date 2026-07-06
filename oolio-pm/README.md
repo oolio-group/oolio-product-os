@@ -19,6 +19,17 @@ A single Cowork plugin bundling Oolio's product-management skills. Install it on
 - `storm-research` — the research engine that grounds the decision in cited evidence first.
 - `personas-library/` — a self-contained snapshot of the persona library the council reads from.
 
+**Definition and specs**
+
+- `write-prd` — writes an Oolio PRD from a groomed JPD idea or brief, in the live Oolio PRD format, and publishes it to Confluence.
+- `grill-my-prd` — grills a Confluence PRD one question at a time, then records the outcome as a versioned child page and badged in-place amendments.
+
+**Launch and GTM**
+
+- `gtm-handover` — the executive GTM handover: One-Pager and Supporting Deck, and the `pack_content.json` narrative the other GTM skills read.
+- `gtm-playbooks` — the internal Sales, Account Management, and Onboarding playbooks.
+- `gtm-marketing` — the Marketing Pack: launch announcement, social, email sequence, sales note, campaign brief.
+
 **Jira authoring helpers**
 
 - `jira-epic-groomer` — grooms an epic description to the standard What/Why/Who pattern.
@@ -26,7 +37,11 @@ A single Cowork plugin bundling Oolio's product-management skills. Install it on
 
 **Thinking partners**
 
-- `grill-me` — interviews you relentlessly about a plan, decision, PRD, or design until every branch of the decision tree is resolved.
+- `grill-me` — interviews you relentlessly about a plan, decision, or design until every branch of the decision tree is resolved. For Confluence PRDs, prefer `grill-my-prd`.
+
+**Product context**
+
+- `products/` — one brief per Oolio product, the facts skills may rely on. Scaffolded; briefs are added as product owners supply them.
 
 ## Keeping the persona library in step
 
