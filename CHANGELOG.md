@@ -4,6 +4,14 @@ All notable changes to the **oolio-pm** plugin, newest first. The version here m
 
 Versioning: last number = fix or wording, middle = new ability or skill, first = a big change to how the plugin is used.
 
+## 0.9.3 — 2026-07-07
+
+Fix: plugin description brought under Cowork's 500-character validation cap.
+
+- Niel's local zip-upload test surfaced a real validation failure: "Plugin description must be at most 500 characters." The plugin.json description was 600 characters, and notably had been over the cap since at least v0.5.0 (552 characters), so the breach predates the audit build-out; the marketplace install path simply never enforced it, while the local-upload path does.
+- Rewrote the description to 394 characters and aligned marketplace.json to the same text.
+- Practical consequence: **local zip upload is now a working distribution path** that bypasses the stuck server-side marketplace cache entirely. Download the repo zip from GitHub, upload the `oolio-pm` folder via Cowork's Settings → Plugins → Add → Upload local plugin.
+
 ## 0.9.2 — 2026-07-07
 
 Docs: the Cowork stale-cache issue is now documented for teammates.
