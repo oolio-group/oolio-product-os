@@ -1,6 +1,16 @@
 ---
 name: convene-vpc
-description: Convene the Oolio Virtual Product Council to pressure-test a product decision, design, requirement, spec, PRD, or piece of research. Use when the user says "convene the VPC", "run the product council", "review this decision/design/PRD/spec", "pressure-test this", "validate this against our personas", "what would the council say", or hands over a Confluence page, Jira ticket, Figma file, prototype URL, or document and asks for a validated decision. This is the orchestrator: it runs the whole loop, chairs the subcommittees, and produces a recorded, human-validated decision. It calls the child skills storm-research, operator-council-review, design-council-review, and leadership-subcommittee-review.
+description: >-
+  Convene the Oolio Virtual Product Council to pressure-test a product decision,
+  design, requirement, spec, PRD, or piece of research. Use when the user says
+  "convene the VPC", "run the product council", "review this
+  decision/design/PRD/spec", "pressure-test this", "validate this against our
+  personas", "what would the council say", or hands over a Confluence page, Jira
+  ticket, Figma file, prototype URL, or document and asks for a validated
+  decision. This is the orchestrator: it runs the whole loop, chairs the
+  subcommittees, and produces a recorded, human-validated decision. It calls the
+  child skills storm-research, operator-council-review, design-council-review,
+  and leadership-subcommittee-review.
 ---
 
 # Convene the Virtual Product Council

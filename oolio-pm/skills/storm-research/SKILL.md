@@ -1,6 +1,16 @@
 ---
 name: storm-research
-description: Use when someone asks to run Storm Research, use the storm-research skill, run the STORM method on a topic, says "storm research this" / "storm report on X" / "give me a STORM briefing on X", or wants a multi-perspective, citation-verified research briefing delivered as a clean HTML report and, optionally, a Confluence page. Also the research engine the Virtual Product Council calls before its panels argue. Runs a 4-phase pipeline: five expert lenses (Practitioner, Academic, Skeptic, Economist, Historian) -> contradiction map -> synthesized HTML report -> adversarial peer review + primary-source verification, then publishes. Best where multiple viewpoints and fact-checked claims matter; overkill for a simple factual lookup.
+description: >-
+  Use when someone asks to run Storm Research, use the storm-research skill, run
+  the STORM method on a topic, says "storm research this" / "storm report on X"
+  / "give me a STORM briefing on X", or wants a multi-perspective,
+  citation-verified research briefing delivered as a clean HTML report and,
+  optionally, a Confluence page. Also the research engine the Virtual Product
+  Council calls before its panels argue. Runs a 4-phase pipeline: five expert
+  lenses (Practitioner, Academic, Skeptic, Economist, Historian) ->
+  contradiction map -> synthesized HTML report -> adversarial peer review +
+  primary-source verification, then publishes. Best where multiple viewpoints
+  and fact-checked claims matter; overkill for a simple factual lookup.
 argument-hint: "[topic to research]"
 ---
 

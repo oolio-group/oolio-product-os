@@ -4,6 +4,13 @@ All notable changes to the **oolio-pm** plugin, newest first. The version here m
 
 Versioning: last number = fix or wording, middle = new ability or skill, first = a big change to how the plugin is used.
 
+## 0.9.4 — 2026-07-09
+
+Fix: two skills had unparseable YAML frontmatter and were shipping with empty metadata.
+
+- A fresh `claude plugin validate --strict` pass (run against the current official plugin docs) failed on `convene-vpc` and `storm-research`. Both descriptions were single-line unquoted YAML scalars containing a colon followed by a space ("This is the orchestrator: it runs…", "Runs a 4-phase pipeline: five expert lenses…"), which YAML cannot parse. At runtime the whole frontmatter block was silently dropped, so those two skills loaded with no name and no trigger description, breaking auto-invocation.
+- Converted both descriptions to the `>-` folded block style already used by grill-my-prd and jpd-loop. Text unchanged. The full plugin now passes `claude plugin validate --strict` with zero errors.
+
 ## 0.9.3 — 2026-07-07
 
 Fix: plugin description brought under Cowork's 500-character validation cap.
