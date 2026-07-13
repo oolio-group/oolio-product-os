@@ -4,6 +4,14 @@ All notable changes to the **oolio-pm** plugin, newest first. The version here m
 
 Versioning: last number = fix or wording, middle = new ability or skill, first = a big change to how the plugin is used.
 
+## 0.10.1 — 2026-07-13
+
+Packaging fix: the release zip now installs. No plugin content changed from 0.10.0.
+
+- **`scripts/package-plugin.sh` zipped the wrong root.** It ran `zip -r … oolio-pm`, which wraps everything under a top-level `oolio-pm/` folder, putting `plugin.json` at `oolio-pm/.claude-plugin/plugin.json` and skills at `oolio-pm/skills/…`. Cowork's local upload (and the Claude plugin loader) expect `.claude-plugin/plugin.json` and `skills/` at the **archive root**. Result: the v0.10.0 zip uploaded, showed the plugin name and toggle, but reported "This plugin doesn't have any skills or agents." This bug affected every script-built zip since v0.9.5; the last install that worked (v0.9.3) was zipped by hand before the script existed, with the contents already at root.
+- **Fix:** the script now zips the *contents* of `oolio-pm/` from inside the directory, so the archive root is the plugin root, and asserts `.claude-plugin/plugin.json` is at the root before finishing (fails loudly otherwise).
+- The v0.10.0 release zip is superseded; install from the v0.10.1 release.
+
 ## 0.10.0 — 2026-07-13
 
 JPD operating-model alignment (EVITA-87 + EVITA-88, one release): the skills catch up with the live instance and every backlog sweep gets guard rails. Decisions recorded on EVITA-77 plus Niel's 13 Jul rulings. Middle-number bump because the release adds new abilities (Horizon proposal, stage-gating, customer connection, new steering-pack sections), per the versioning rule above.
