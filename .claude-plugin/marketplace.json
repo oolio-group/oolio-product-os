@@ -12,7 +12,7 @@
       "name": "oolio-pm",
       "source": "./oolio-pm",
       "description": "Oolio Product Management. The full PM toolkit, signal to shipped: feedback intake into JPD, idea grooming to Oolio's field and title standards, PRD writing and grilling, decision validation against the Virtual Product Council and its hospitality persona library, Jira epic hygiene, Steering packs, the GTM suite (handover, playbooks, marketing), and post-launch metrics review. Nineteen skills.",
-      "version": "0.10.0",
+      "version": "0.10.1",
       "author": {
         "name": "Niel Cody, Oolio Product"
       }
