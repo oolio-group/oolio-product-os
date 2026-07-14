@@ -1,112 +1,84 @@
 # Publishing the Oolio PM plugin — step by step
 
-This is the whole workflow for editing the **oolio-pm** plugin and getting a new version to your team. You do not need to write any code. Three roles:
+The whole workflow for editing the **oolio-pm** plugin and getting a new version to your team. You do not need to write code.
 
-- **Cowork builds** — where you change skill content (just chat with me).
-- **GitHub Desktop publishes** — an app with buttons that sends your changes to GitHub.
-- **Your team pulls** — installs once, then gets updates.
+GitHub repo (the home of this collection): **`oolio-group/oolio-pm-plugin`** (public). Use exactly that URL everywhere. The old `oolio-pm-plugins` (with an `s`) redirects here but registers as a *separate* marketplace, so never mix the two.
 
-GitHub repo (the home of this collection): `oolio-group/oolio-pm-plugin` (public).
-
-> **How distribution works right now (July 2026):** Cowork's marketplace install is broken for this repo — its server-side cache is frozen on old versions and nothing we do here can refresh it (details under "Known issue" below). Until Anthropic fixes it, **the official distribution channel is the release zip**: every version is packaged as `oolio-pm-vX.Y.Z.zip` and attached to a GitHub Release at https://github.com/oolio-group/oolio-pm-plugin/releases. Installing a zip via Cowork's local upload is proven to work and always gives the exact version. Do not use the marketplace path.
+> **How distribution works.** The plugin is versioned **by git commit** — there are no version numbers in the manifests, on purpose. Every push to `main` is a new version. Anyone installed from the repo URL with auto-update on gets your change on their next session, with nothing to bump and nothing to re-download by hand. This is the officially recommended setup for an actively-edited internal plugin.
 
 ---
 
-## A. One-time setup (only the very first time, ever)
+## A. One-time setup
 
-### A1. Install GitHub Desktop
-1. Go to https://desktop.github.com and click **Download for macOS**.
-2. Open the downloaded file and drag **GitHub Desktop** into your Applications folder.
-3. Open GitHub Desktop. Click **Sign in to GitHub.com** and log in with your existing GitHub account. Authorise it when the browser asks.
+### A1. The repo is already published
 
-### A2. Add this folder
-1. In GitHub Desktop, top menu: **File → Add Local Repository**.
-2. Click **Choose…** and select this folder:
-   `Documents/Claude/Code/oolio-pm-plugins`
-3. Click **Add Repository**. (I've already prepared it as a repository, so this just works.)
+`oolio-group/oolio-pm-plugin` is live and public, so teammates can install without GitHub org access. Nothing to do here unless you are moving the repo.
 
-### A3. Publish it to GitHub
-1. Click the blue **Publish repository** button (top right).
-2. Leave **"Keep this code private"** unticked, so the repo is **public** and teammates can install without GitHub org access.
-3. Set the owner to **oolio-group** if offered; otherwise your own account is fine for now.
-4. Make sure the name is **oolio-pm-plugin**. Click **Publish repository**.
+### A2. Teammates install once (either surface)
 
-### A4. Connect it to Cowork
-1. In Cowork: **Settings → Plugins → Add plugin → GitHub** (Organization settings if you have them).
-2. Enter `oolio-group/oolio-pm-plugin` (or `your-username/oolio-pm-plugin` if you published to your own account).
-3. Install **oolio-pm**.
+**Claude Code (CLI):**
 
-That's the collection live. From now on you only do Part B.
+```
+/plugin marketplace add oolio-group/oolio-pm-plugin
+/plugin install oolio-pm@oolio-pm-plugin
+```
 
----
+**Or, for auto-registration and auto-updates**, add this to Claude Code `settings.json`:
 
-## B. Each time you want to ship a change (repeat this)
+```json
+{
+  "extraKnownMarketplaces": {
+    "oolio-pm-plugin": {
+      "source": { "source": "github", "repo": "oolio-group/oolio-pm-plugin" },
+      "autoUpdate": true
+    }
+  },
+  "enabledPlugins": { "oolio-pm@oolio-pm-plugin": true }
+}
+```
 
-### Step 1 — Edit the content (Cowork)
-Open a Cowork chat and tell me what to change, e.g. *"Edit the jpd-loop skill in oolio-pm: change X."* I edit the real file under `oolio-pm/skills/…`. Click **Approve** on the folder pop-up if it appears.
+`"autoUpdate": true` matters: for private marketplaces auto-update is **off** unless you switch it on, which is why updates felt stuck before.
 
-### Step 2 — Bump the version (Cowork — just ask)
-Ask me to *"bump the plugin version."* I update it in **both** files (they must match):
-
-- `.claude-plugin/marketplace.json` → the plugin's `version`
-- `oolio-pm/.claude-plugin/plugin.json` → `version`
-
-Version rules (simple):
-
-- Tiny fix or wording → bump the last number: `0.1.0 → 0.1.1`
-- New ability or skill → bump the middle: `0.1.1 → 0.2.0`
-- Big change to how people use it → bump the first: `0.2.0 → 1.0.0`
-
-### Step 3 — Publish (GitHub Desktop — buttons only)
-1. Open **GitHub Desktop**. It already shows your changes in the left list.
-2. Bottom-left, type a short **Summary**, e.g. `oolio-pm v0.2.0 — what changed`.
-3. Click **Commit to main**.
-4. Click **Push origin** (top right).
-
-### Step 4 — Cut the release zip (Cowork — just ask)
-Ask me to *"cut the release."* I run `scripts/package-plugin.sh` (it refuses to package if the two version numbers disagree) and publish a GitHub Release with the zip attached, so the team always has a one-click download of the exact current version at:
-
-**https://github.com/oolio-group/oolio-pm-plugin/releases/latest**
-
-If you'd rather do it by hand: run the script, then create a release on GitHub tagged `vX.Y.Z` and drag the zip from `dist/` onto it.
-
-### Step 5 — Tell your team
-Message them: *"oolio-pm vX.Y.Z is out — grab the zip from the releases page and re-upload it in Cowork."* Upgrading is the same as installing (Part C); the new upload replaces the old version.
-
-That's it. Steps 1–5 every release.
-
-### Known issue — the Cowork marketplace path is frozen (do not use it)
-
-Cowork's backend caches a snapshot of this repo per source URL, and as of July 2026 that snapshot is taken **once, when the marketplace is first added, and does not refresh on its own**. Remove-and-re-add reuses the same cached record; the Update button does nothing. Both slugs for this repo are burnt (`oolio-pm-plugin` is frozen at v0.3.3, `oolio-pm-plugins` at v0.5.0), so every marketplace install serves one of those stale versions no matter what we push. The fix sits with Anthropic (bug report filed; see the CHANGELOG for status).
-
-**The way around it is the release zip (Part C).** Local upload bypasses the marketplace cache entirely and was proven working in the v0.9.3 test. GitHub always serves the latest source (check the real version any time at https://github.com/oolio-group/oolio-pm-plugin/blob/main/CHANGELOG.md). Do not judge the repo by what the Cowork marketplace shows.
-
-The trade-off of the zip path: no automatic updates. Each new version is a fresh download-and-upload, which is why Step 5 (telling the team) matters. When Anthropic fixes the cache, we can switch back to the marketplace path with auto-updates; until then the zip is the truth.
+**Cowork:** Settings → Plugins → Add plugin → GitHub → `oolio-group/oolio-pm-plugin` → install **oolio-pm**. See section D if Cowork serves a stale version.
 
 ---
 
-## C. How anyone installs or updates it (you and teammates alike)
+## B. Each time you ship a change (repeat this)
 
-1. Download the latest zip from **https://github.com/oolio-group/oolio-pm-plugin/releases/latest** (the file named `oolio-pm-vX.Y.Z.zip`).
-2. Cowork → **Settings → Plugins → Add plugin → Upload local plugin** (the exact wording may differ slightly) and upload the zip.
-3. Done — the full skill set appears (see the README for the current list).
+### Step 1 — Edit the content
+Tell me what to change, e.g. *"Edit the jpd-loop skill in oolio-pm: change X."* I edit the real file under `oolio-pm/skills/…`.
 
-Updating to a new version is the same three steps with the new zip. Do **not** install via the GitHub / marketplace option — it serves a stale version (see the Known issue above).
+### Step 2 — Add a CHANGELOG entry
+Ask me to log it. I add a dated entry to [CHANGELOG.md](CHANGELOG.md), newest first, saying what changed and why. **There is no version number to bump** — commit-based versioning handles that. (Do not add a `version` field back to the manifests; it would re-break update propagation. See [CLAUDE.md](CLAUDE.md).)
+
+### Step 3 — Commit and push
+Ask me to *"ship it"* (I commit and push), or use GitHub Desktop: type a summary, **Commit to main**, **Push origin**.
+
+That's it. On the next session, everyone on auto-update has the change. No release, no zip, no announcement needed.
 
 ---
 
-## D. One-off cleanup after first install (you, once)
+## C. How anyone installs or updates it
 
-Some of these skills also exist as your older personal copies (the standalone `jpd-loop` skill and the separate `product-council` plugin). Once **oolio-pm** is installed from GitHub and working, retire the old ones so you don't run duplicates:
+- **Install:** section A2.
+- **Update:** automatic if you added the settings snippet with `"autoUpdate": true`. To force it now: `/plugin update oolio-pm@oolio-pm-plugin` (CLI), or in Cowork re-open the plugin and update.
 
-- Remove the standalone `jpd-loop` personal skill in **Settings → Capabilities**.
-- Remove the old `product-council` plugin in **Settings → Plugins**.
+---
 
-The bundled versions inside **oolio-pm** replace both.
+## D. Cowork note and the zip fallback
+
+Cowork is a separate surface from Claude Code and, in mid-2026, its marketplace backend was observed to **snapshot a repo once per URL and not refresh**, serving a frozen old version. The config in this repo is now correct, so this should be retested cleanly:
+
+**One-time Cowork test.** Remove any existing oolio-pm marketplace entry first (both the `oolio-pm-plugin` and `oolio-pm-plugins` slugs if present), then add `oolio-group/oolio-pm-plugin` fresh and install. Check the skill list against [oolio-pm/README.md](oolio-pm/README.md). If it shows the current skill set, the marketplace path works in Cowork and you are done. If it still serves an old version, the freeze is Anthropic-side and the zip fallback below is the reliable path there.
+
+**Zip fallback (Cowork only, if the test fails):**
+1. Ask me to *"cut the release zip."* I run `scripts/package-plugin.sh` (it builds `dist/oolio-pm.zip` with the plugin root at the archive root).
+2. Cowork → Settings → Plugins → Add plugin → **Upload local plugin** → upload the zip.
+3. Re-uploading a newer zip replaces the old version. This path has no auto-update, so you re-upload on each change.
 
 ---
 
 ## Notes
 
-- **Can Cowork push for me now?** Yes. GitHub access is set up on Niel's Mac (the `gh` CLI is authenticated), so Cowork can commit and push this repo directly when asked. GitHub Desktop still works as the buttons-only alternative if you prefer to review changes visually before they go up. Either route is fine; do not run both at once on the same change.
-- **Why not Claude Code?** Claude Code is a Terminal tool for developers. For just publishing this folder, GitHub Desktop does the same job with buttons. You can learn Claude Code later if you want; you don't need it for this.
+- GitHub access is set up on Niel's Mac (`gh` authenticated), so Cowork/Claude Code can commit and push directly when asked. GitHub Desktop is the buttons-only alternative. Do not run both on the same change.
+- The repo is intentionally **public** so teammates install without org access. It bundles Oolio-internal material, so keep anything genuinely sensitive out of it.

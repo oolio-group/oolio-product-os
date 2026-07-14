@@ -1,20 +1,16 @@
 #!/bin/bash
-# Package the oolio-pm plugin as a versioned zip for Cowork local upload.
+# Package the oolio-pm plugin as a zip for Cowork local upload (the Cowork fallback
+# when the marketplace path serves a stale version). The plugin is versioned by git
+# commit, so the zip is labelled with the short commit SHA rather than a version number.
 # Usage: ./scripts/package-plugin.sh [output-dir]   (default: ./dist)
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 OUT_DIR="${1:-$REPO_ROOT/dist}"
 
-VERSION=$(python3 -c "import json; print(json.load(open('$REPO_ROOT/oolio-pm/.claude-plugin/plugin.json'))['version'])")
-MARKET_VERSION=$(python3 -c "import json; print(json.load(open('$REPO_ROOT/.claude-plugin/marketplace.json'))['plugins'][0]['version'])")
+SHA="$(git -C "$REPO_ROOT" rev-parse --short HEAD 2>/dev/null || echo manual)"
 
-if [ "$VERSION" != "$MARKET_VERSION" ]; then
-  echo "ERROR: version mismatch — plugin.json says $VERSION, marketplace.json says $MARKET_VERSION. Fix before packaging." >&2
-  exit 1
-fi
-
-ZIP="$OUT_DIR/oolio-pm-v$VERSION.zip"
+ZIP="$OUT_DIR/oolio-pm.zip"
 mkdir -p "$OUT_DIR"
 rm -f "$ZIP"
 
@@ -37,5 +33,5 @@ if ! grep -q " \.claude-plugin/plugin.json$" <<<"$ZIP_LIST"; then
   exit 1
 fi
 
-echo "Packaged v$VERSION -> $ZIP"
+echo "Packaged oolio-pm (commit $SHA) -> $ZIP"
 unzip -l "$ZIP" | tail -1

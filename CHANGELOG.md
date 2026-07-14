@@ -1,8 +1,14 @@
 # Changelog
 
-All notable changes to the **oolio-pm** plugin, newest first. The version here matches the `version` in `.claude-plugin/marketplace.json` and `oolio-pm/.claude-plugin/plugin.json`. Every release updates this file (see [CLAUDE.md](CLAUDE.md)).
+All notable changes to the **oolio-pm** plugin, newest first. The plugin is versioned **by git commit** (there is no `version` field in the manifests, by design), so new entries are dated rather than numbered. Every change updates this file (see [CLAUDE.md](CLAUDE.md)). Entries below that carry version numbers are the historical record from before the switch.
 
-Versioning: last number = fix or wording, middle = new ability or skill, first = a big change to how the plugin is used.
+## 2026-07-14 — Commit-based versioning; repo-URL install restored
+
+Fixes the root cause of edits not reaching the team. The plugin no longer carries a `version` field in either `oolio-pm/.claude-plugin/plugin.json` or the `marketplace.json` plugin entry, so **every commit is a new version** and updates propagate without a manual bump. This also removes the duplicate version pin (it was set in both files; the plugin spec warns against that, as `plugin.json` silently wins and stale numbers block updates).
+
+- **README.md and PUBLISHING.md rewritten** to make repo-URL install the supported path, with a team `settings.json` snippet that sets `"autoUpdate": true` (private marketplaces do not auto-update otherwise). The release zip is retained only as a Cowork fallback, pending a clean re-add test in Cowork.
+- **CLAUDE.md** maintenance rule updated: no version to bump; do not reintroduce a `version` field.
+- No skill content changed.
 
 ## 0.10.1 — 2026-07-13
 

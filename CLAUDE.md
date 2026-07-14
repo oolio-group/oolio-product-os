@@ -9,7 +9,7 @@ All edits to the `oolio-pm` plugin — skills, personas, lenses, templates — a
 ## On every change — do all four, every time
 
 1. **Make the change** under `oolio-pm/` (skills in `oolio-pm/skills/`, personas in `oolio-pm/personas-library/`).
-2. **Bump the version** in **both** `.claude-plugin/marketplace.json` (the plugin's `version` inside the `plugins` array) and `oolio-pm/.claude-plugin/plugin.json` — they must match. Last number = fix or wording, middle = new ability or skill, first = a big change to how it is used. The separate `metadata.version` at the top of `marketplace.json` versions the marketplace itself, not the plugin; bump it only when the marketplace structure changes (a plugin added, removed, or renamed), and leave it alone for ordinary plugin releases.
+2. **No version to bump.** The plugin is versioned by git commit: every push is automatically a new version, so edits reach the team without a bump. This is deliberate — there is **no `version` field** in `oolio-pm/.claude-plugin/plugin.json` or in the marketplace plugin entry. **Do not reintroduce one.** A plugin `version` pins the plugin, and Claude Code then serves updates only when the number changes, so a forgotten bump silently stops your edits from propagating (this was the old bug). The `metadata.version` at the top of `marketplace.json` versions the marketplace structure only; leave it unless a plugin is added, removed, or renamed.
 3. **Add a CHANGELOG entry.** Update [CHANGELOG.md](CHANGELOG.md) with a new section for the version, newest first, saying what changed and why. This is not optional. A version bump without a changelog entry is an incomplete change.
 4. **Commit and push.** Both steps, so GitHub (and teammates' Cowork) actually get it.
 
