@@ -6,15 +6,34 @@ The Product team's plugin collection (marketplace) for Cowork. Other Oolio teams
 
 - **oolio-pm** — Oolio Product Management. Bundles the Virtual Product Council (convene-vpc and its operator, design, leadership, and STORM subcommittees, plus a snapshot of the persona library), the JPD grooming loop (jpd-loop), idea groomer (jpd-idea-groomer) and title standard (jpd-title-standard), the Jira epic helpers (jira-epic-groomer, jira-epic-titler), and grill-me for stress-testing a plan or decision. Self-contained.
 
-## Install in Cowork (for Oolio teammates)
+## Install (for Oolio teammates)
 
-Most people will use this in Cowork, not Claude Code. Install from the **release zip** — do not use Cowork's GitHub / marketplace option, which is stuck serving an old version (see [PUBLISHING.md](PUBLISHING.md), "Known issue").
+Install straight from the repo URL. You install once and get updates automatically, because the plugin is versioned by commit (no version numbers to chase). Use exactly one URL: **`oolio-group/oolio-pm-plugin`**. The old `oolio-pm-plugins` (with an `s`) redirects here but registers as a *separate* marketplace, so don't add both.
 
-1. Download the latest `oolio-pm-vX.Y.Z.zip` from the [releases page](https://github.com/oolio-group/oolio-pm-plugin/releases/latest).
-2. In Cowork, open **Settings → Plugins → Add plugin → Upload local plugin** (exact wording may differ slightly) and upload the zip.
-3. Done. The plugin's skills appear in your skill list (for example, ask "convene the VPC").
+**Claude Code (CLI):**
 
-Updating is the same three steps with the new zip when Niel announces a release. The real current version is always the top entry of [CHANGELOG.md](CHANGELOG.md).
+```
+/plugin marketplace add oolio-group/oolio-pm-plugin
+/plugin install oolio-pm@oolio-pm-plugin
+```
+
+**Team auto-install (settings.json).** Add this to your Claude Code settings and the plugin registers, enables, and **auto-updates** with no further steps:
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "oolio-pm-plugin": {
+      "source": { "source": "github", "repo": "oolio-group/oolio-pm-plugin" },
+      "autoUpdate": true
+    }
+  },
+  "enabledPlugins": { "oolio-pm@oolio-pm-plugin": true }
+}
+```
+
+**Cowork:** Settings → Plugins → Add plugin → GitHub, and enter `oolio-group/oolio-pm-plugin`. Install **oolio-pm**. If Cowork serves an old version (a known backend cache issue in mid-2026), fall back to the release zip, see [PUBLISHING.md](PUBLISHING.md).
+
+The skills then appear in your skill list (for example, ask "convene the VPC"). The current content is always whatever is on `main`; [CHANGELOG.md](CHANGELOG.md) records what changed.
 
 ## Layout
 
@@ -24,7 +43,7 @@ oolio-pm-plugins/           local folder name; the GitHub repo is oolio-group/oo
 │   └── marketplace.json    the marketplace manifest Cowork reads (must live here)
 ├── README.md
 ├── CHANGELOG.md            what changed in each version
-├── CLAUDE.md               maintenance rules (bump version, log changes, archive)
+├── CLAUDE.md               maintenance rules (commit-based versioning, log changes, archive)
 ├── PUBLISHING.md           how to edit, version, and publish (read this)
 ├── LICENSE                 usage terms (public repo, internal material)
 └── oolio-pm/               the plugin
@@ -38,7 +57,7 @@ oolio-pm-plugins/           local folder name; the GitHub repo is oolio-group/oo
 
 ## Updating
 
-See **PUBLISHING.md** for the full step-by-step. In short: edit the skill under `oolio-pm/skills/`, bump the version in both `.claude-plugin/marketplace.json` and `oolio-pm/.claude-plugin/plugin.json`, add a **CHANGELOG.md** entry, then commit and push. Cowork picks up the new version on its next sync. Maintenance rules are in **CLAUDE.md**.
+See **PUBLISHING.md** for the full step-by-step. In short: edit the skill under `oolio-pm/skills/`, add a **CHANGELOG.md** entry, then commit and push. There is no version to bump, every commit is a new version, so installs with auto-update pick the change up on their next session. Maintenance rules are in **CLAUDE.md**.
 
 ## Notes
 
