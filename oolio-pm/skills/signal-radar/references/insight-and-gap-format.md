@@ -29,7 +29,7 @@ Order rows by signal strength, strongest first. "Monitor" candidates still get s
 The taxonomy, metadata, and linking rules live in `${CLAUDE_PLUGIN_ROOT}/references/research-os.md`; this is how a signal-radar run maps onto them:
 
 - **One evidence log per run** (`evidence/YYYY-MM-DD-<slug>`): mode and target (JPD key or "gap scan"), the source list (description — URL — tier — date), what was searched and what came up empty. Append-only.
-- **Mode A additionally writes the drafted Insight lines** (description · link · impact · tier) as insights linked to the evidence log — the paste-ready list must survive in Brain, not just in chat — and ingests durable competitor/trend findings onto the relevant dossier or trend page (supersede rule applies).
+- **Mode A additionally writes the drafted Insight lines** (description · link · impact · tier) as insights linked to the evidence log — the Insight set must survive in Brain, not just in chat — and ingests durable competitor/trend findings onto the relevant dossier or trend page (supersede rule applies).
 - **Mode B additionally updates the gap ledger** (`gaps/ledger`): one row per candidate — status (raised / corroborated / declined / monitored), evidence count, sources, review-by date, and the JPD key once one exists. Monitored candidates get their heartbeat from `competitor-watch` sweeps checking the ledger's review-by dates.
 
 Always `wiki-query` before writing; `wiki-ingest` onto existing pages (extend, don't replace); `wiki-new` only when nothing covers the topic.

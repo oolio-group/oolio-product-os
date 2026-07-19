@@ -2,6 +2,18 @@
 
 All notable changes to the **oolio-pm** plugin, newest first. The plugin is versioned **by git commit** (there is no `version` field in the manifests, by design), so new entries are dated rather than numbered. Every change updates this file (see [CLAUDE.md](CLAUDE.md)). Entries below that carry version numbers are the historical record from before the switch.
 
+## 2026-07-20 — Native JPD Insight creation: the standard flips from paste-list to attach-natively
+
+Atlassian confirmed (June 2026) that native Polaris Insights are creatable via their public GraphQL API, and published an official AI skill with the full recipe; validated on 19 July against their reference repo and community confirmation. The Atlassian MCP connector still cannot do it, and the Anthropic cloud sandbox cannot reach the API endpoints, so the standard is route-based. Every skill that previously said "native Insights aren't creatable from here" is updated.
+
+- **`jpd-loop/references/jpd-insights-api.md`** (new reference) — the full recipe: route decision (Route A Polaris GraphQL API for local sessions with network access, needing a one-time 3LO OAuth app; Route B Chrome UI automation of the Insights tab for cloud sessions with the user's browser connected; Route C paste-ready list as last resort), token handling, the `createPolarisInsight` mutation with the verified payload schema and its gotchas (`CreatePolarisInsightInput` not `PolarisCreateInsightInput`, the mandatory `X-ExperimentalApi: polaris-v0` header, `quotes`/`quotesItem` snippet format, mandatory `context.icon`), the read query, and a common-errors table.
+- **`jpd-loop`** — write-back step 3 flips from "hand the human a paste-ready list" to "create the native Insights on the idea", with the paste list demoted to fallback. `references/insights-and-citations.md` rewritten from "important limitation" to the three creation routes; the standard is now that every strong piece of evidence gets attached as a native Insight, with the Description block and DISC page mirroring it.
+- **`signal-radar`** — Mode A step 5 now presents the drafted list for one batch approval, then creates the Insights natively (duplicate check first), with paste-ready as fallback; description and definition of done updated. The "must never" boundary clarified: an Insight is an evidence attachment, not an issue edit.
+- **`feedback-to-idea`** — the "existing idea covers it" path now creates the Insight natively where a route allows instead of always handing over a paste line.
+- **`discovery-wayfinder/references/jira-modelling.md`** — the Known API gaps note corrected: Insights are now creatable (links panel and idea-type creation remain UI-only).
+
+Skill count unchanged (a reference file, not a new skill). Open item: Route A needs Niel's one-time 3LO OAuth app before local sessions can use the API directly.
+
 ## 2026-07-19 — New skill: discovery-wayfinder (promoted from skills-in-progress)
 
 The first skill to graduate through the `skills-in-progress/` lifecycle: `discovery-wayfinder`, adapted from Matt Pocock's Wayfinder, built from the handoff brief and promoted the same day after the required adversarial review and dry-run.

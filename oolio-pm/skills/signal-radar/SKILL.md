@@ -8,8 +8,8 @@ description: >-
   this idea with real signal", "find gaps in the backlog / roadmap", "what
   are we missing", "scan HubSpot and social for signal on this", or asks to
   keep Oolio Brain in sync with fresh market and customer research. Two
-  modes: idea mode (given a JPD key, gathers external evidence and hands
-  over a paste-ready Insight list) and gap-scan mode (no key, scans the
+  modes: idea mode (given a JPD key, gathers external evidence and attaches
+  it as native Insights on the idea) and gap-scan mode (no key, scans the
   whole backlog against market, customer, and social signal, then hands
   candidate gaps to `feedback-to-idea`). Always writes findings into Oolio
   Brain so research compounds instead of repeating. Do NOT trigger for raw
@@ -53,8 +53,8 @@ Trigger: a single JPD key given ("add insights to OHSI-612", "validate this idea
    - Social — via Apify, using the pinned Actors and scoping rules in `${CLAUDE_PLUGIN_ROOT}/skills/competitor-watch/references/mining-playbook.md` (workflow basics in `references/apify-actors.md`).
    Look for evidence **for and against** the idea, not just confirmation.
 4. **Draft Insights.** For each strong item: one-line description, the real source URL, an impact rating 1-5 with a one-line reason. Format and impact-rating discipline (including the social-evidence cap) in `references/insight-and-gap-format.md`. Never fabricate or guess a link.
-5. **Hand over, don't write Jira yourself.** Present the Insight list to the user, paste-ready (description · link · impact), same limitation as `jpd-loop`: native Insights aren't creatable from here. If the user wants these on the idea record now, offer `jpd-loop` (full loop) or say they can paste the list into JPD directly.
-6. **Sync to Brain, including the Insight lines themselves.** Per research-os: an evidence log for the run, and the drafted Insight lines (description · link · impact · tier) written as insights linked to it — the paste-ready list is the run's product and must survive in Brain, not just in chat. `wiki-ingest` onto existing pages found in step 2; `wiki-new` otherwise.
+5. **Present the list, then attach as native Insights.** Show the drafted Insight list (description · link · impact) and get one approval for the batch. Then create them as native Insights on the idea — route decision and full recipe in `${CLAUDE_PLUGIN_ROOT}/skills/jpd-loop/references/jpd-insights-api.md` (Polaris GraphQL API when network + creds allow; Chrome UI automation from cloud sessions). Read the idea's existing Insights first and never create duplicates. Only if both routes are unavailable, hand the user the paste-ready list as the fallback.
+6. **Sync to Brain, including the Insight lines themselves.** Per research-os: an evidence log for the run, and the drafted Insight lines (description · link · impact · tier) written as insights linked to it — the Insight set is the run's product and must survive in Brain, not just in chat. `wiki-ingest` onto existing pages found in step 2; `wiki-new` otherwise.
 
 ## Mode B — gap scan
 Trigger: no key given ("what are we missing", "scan for gaps", "run signal radar on the roadmap").
@@ -78,7 +78,7 @@ Not all sources carry equal weight. A HubSpot-confirmed pattern across several a
 Apify pulls from public sources only. Never scrape login-gated content, private profiles, or DMs. Aggregate sentiment and public reviews/posts are fair game; do not compile a dossier on a named private individual. Keep Actor runs scoped (small result counts, narrow date ranges) — this is signal sampling, not mass collection. Full detail in `references/apify-actors.md`.
 
 ## This skill must never
-- Create, edit, or transition a Jira issue, or write a JPD custom field. Hand off to `jpd-idea-groomer`, `feedback-to-idea`, or `jpd-loop`.
+- Create, edit, or transition a Jira issue, or write a JPD custom field. Hand off to `jpd-idea-groomer`, `feedback-to-idea`, or `jpd-loop`. (Creating native Insights per step 5 is allowed — an Insight is an evidence attachment, not an issue edit.)
 - Fabricate, guess, or omit a source link. No link, no Insight, at most a note.
 - Treat a single uncorroborated social post as strong (4-5) evidence.
 - Propose a "gap" that's already an idea in the backlog, including killed or parked ones, without checking first.
@@ -86,7 +86,7 @@ Apify pulls from public sources only. Never scrape login-gated content, private 
 - Overwrite an existing Brain page wholesale — ingest onto it, don't replace it.
 
 ## Definition of done
-**Mode A:** Brain checked first; available connectors queried (or gaps noted); a balanced set of cited Insights drafted with impact ratings; the paste-ready list handed to the user; findings synced to Brain.
+**Mode A:** Brain checked first; available connectors queried (or gaps noted); a balanced set of cited Insights drafted with impact ratings; the Insights created natively on the idea (or the paste-ready list handed over if no route was available); findings synced to Brain.
 **Mode B:** backlog snapshot pulled; Brain checked first; signal scanned across available sources; every candidate cross-checked against the backlog and Brain; a gap report presented and one batch approval taken; approved candidates handed to `feedback-to-idea`; findings synced to Brain whatever the outcome.
 
 ## References (read on demand)
