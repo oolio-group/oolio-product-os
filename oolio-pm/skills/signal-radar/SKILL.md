@@ -7,7 +7,9 @@ description: >-
   radar", "sync the brain", "what's the market saying about X", "validate
   this idea with real signal", "find gaps in the backlog / roadmap", "what
   are we missing", "scan HubSpot and social for signal on this", or asks to
-  keep Oolio Brain in sync with fresh market and customer research. Two
+  keep Oolio Brain in sync with fresh market and customer research. Do
+  NOT trigger for a single already-found piece of evidence the user just
+  wants attached to ideas (use `add-insight`). Two
   modes: idea mode (given a JPD key, gathers external evidence and attaches
   it as native Insights on the idea) and gap-scan mode (no key, scans the
   whole backlog against market, customer, and social signal, then hands

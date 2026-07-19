@@ -14,7 +14,7 @@ description: >-
 
 # PM compass
 
-The router. Twenty-three skills is too many to hold in your head, and the biggest waste is not a missing skill but the right one going unused. This skill turns a described situation into the one skill (or short chain) that fits, explains the hand-off in a sentence, and offers to start it. It never does the destination skill's work itself.
+The router. Twenty-five skills is too many to hold in your head, and the biggest waste is not a missing skill but the right one going unused. This skill turns a described situation into the one skill (or short chain) that fits, explains the hand-off in a sentence, and offers to start it. It never does the destination skill's work itself.
 
 ## How to route
 
@@ -27,7 +27,9 @@ Ask at most one clarifying question, then name the skill. Match on the **situati
 | "Is this idea actually worth doing?" — the full treatment | `jpd-loop` |
 | A big question, no ticket attached, wants a researched briefing | `storm-research` |
 | Evidence for a specific idea from market/social/CRM | `signal-radar` (idea mode) |
+| One useful find to attach to the right idea(s) as an Insight | `add-insight` |
 | "What are we missing?" — backlog vs market gaps | `signal-radar` (gap scan) |
+| A discovery theme too big for one session | `discovery-wayfinder` |
 | "What's <competitor> doing / weak at?", sweeps, battlecards | `competitor-watch` |
 | "Why are we losing deals?" | `win-loss` |
 | A groomed idea that needs a spec | `write-prd` |

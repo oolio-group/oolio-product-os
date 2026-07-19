@@ -1,6 +1,6 @@
 # Oolio PM — Skills Catalogue
 
-The plugin ships **24 skills**, organised here by where they sit in the product lifecycle,
+The plugin ships **25 skills**, organised here by where they sit in the product lifecycle,
 signal to shipped. The folders under `oolio-pm/skills/` stay flat (that is what the Claude
 Code plugin loader expects). This document is the map; the categories are a reading aid, not
 a folder structure.
@@ -21,7 +21,7 @@ per-skill version numbers, by design — the plugin versions by commit.
 | # | Stage | What it is for | Skills |
 |---|-------|----------------|--------|
 | 0 | Start here | Find the right skill | 1 |
-| 1 | Intake & Discovery | Turn raw signal into shaped, groomed ideas | 9 |
+| 1 | Intake & Discovery | Turn raw signal into shaped, groomed ideas | 10 |
 | 2 | Specs & PRDs | Shape ideas into written, pressure-tested specs | 3 |
 | 3 | Validation & Councils | Test decisions against the Virtual Product Council | 4 |
 | 4 | Delivery & Steering | Jira hygiene and executive-facing packs | 3 |
@@ -44,6 +44,7 @@ Turn customer, support, and sales signal into groomed Jira Product Discovery ide
 - **jpd-loop** — Run the full Virtual Product Council grooming loop over a single JPD idea, end to end.
 - **storm-research** — Multi-perspective, citation-verified research briefing (STORM method), delivered as a clean HTML report.
 - **signal-radar** *(New, July 2026)* — Synthesise HubSpot, web, and social signal (via Apify) into cited evidence for a JPD idea, or scan the backlog for gaps against real market and customer demand. Syncs findings into the brain.
+- **add-insight** *(New, July 2026)* — The evidence-first attach: hand it one useful thing and it finds every backlog idea the evidence genuinely supports and attaches it as native JPD Insights, one idea or several.
 - **competitor-watch** *(New, July 2026)* — The standing competitive-intelligence function: per-competitor dossiers in the brain, weekly delta sweeps, review/community deep-dives, campaign and claim-vs-reality mining, and Fact-Impact-Act battlecards.
 - **win-loss** *(New, July 2026)* — Mine HubSpot closed-lost and churn data monthly for the real loss drivers, cross-examined against deal metadata; gaps to the backlog, patterns to the dossiers.
 - **discovery-wayfinder** *(New, July 2026)* — Chart a discovery theme too big for one session as a Jira map of decision tickets (fog-of-war scoping, HITL/AFK ticket types, one decision per session), adapted from Matt Pocock's Wayfinder.

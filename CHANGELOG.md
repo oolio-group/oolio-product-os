@@ -2,6 +2,15 @@
 
 All notable changes to the **oolio-pm** plugin, newest first. The plugin is versioned **by git commit** (there is no `version` field in the manifests, by design), so new entries are dated rather than numbered. Every change updates this file (see [CLAUDE.md](CLAUDE.md)). Entries below that carry version numbers are the historical record from before the switch.
 
+## 2026-07-20 — New skill: add-insight (the evidence-first attach)
+
+The morning's route flip made native Insights creatable; this closes the workflow gap it exposed. Every existing path starts from an idea (`signal-radar` idea mode) or from customer signal (`feedback-to-idea`); nothing started from the evidence itself — "here's something useful I found, which ideas does it belong to?" — with multi-idea attach.
+
+- **`add-insight`** (new, twenty-fifth skill) — hand it one piece of evidence (a URL, an article, a HubSpot ticket or deal, a quote, a stat, a mid-session find) and it establishes the real source URL and reliability tier, finds every backlog idea the evidence genuinely supports (or fit-checks the keys you name — including parked and killed ideas, which fresh evidence resurfaces), proposes a mapping with a per-idea tailored description and per-idea impact rating, takes one batch approval, creates the native Insights via the jpd-insights-api routes (duplicate check first), and mirrors the lines to Brain. Deliberately small: one item per run, no gathering, no grooming, no council; evidence that fits no idea routes to `feedback-to-idea` as intake rather than being force-fitted. Guardrails: no link means no Insight, no undifferentiated copy-paste across ideas, social caps apply.
+- **`pm-compass`** — routing table gains rows for `add-insight` and `discovery-wayfinder` (the latter was missed at its launch), and the body's stale "Twenty-three skills" corrected.
+- **`signal-radar`** — trigger spec gains a do-NOT route to `add-insight` for single already-found items.
+- README, plugin.json, marketplace.json, the skills catalogue, and the vault's Skills Catalogue updated: twenty-four skills → twenty-five.
+
 ## 2026-07-20 — Native JPD Insight creation: the standard flips from paste-list to attach-natively
 
 Atlassian confirmed (June 2026) that native Polaris Insights are creatable via their public GraphQL API, and published an official AI skill with the full recipe; validated on 19 July against their reference repo and community confirmation. The Atlassian MCP connector still cannot do it, and the Anthropic cloud sandbox cannot reach the API endpoints, so the standard is route-based. Every skill that previously said "native Insights aren't creatable from here" is updated.
