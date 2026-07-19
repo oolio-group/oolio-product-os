@@ -2,6 +2,10 @@
 
 All notable changes to the **oolio-pm** plugin, newest first. The plugin is versioned **by git commit** (there is no `version` field in the manifests, by design), so new entries are dated rather than numbered. Every change updates this file (see [CLAUDE.md](CLAUDE.md)). Entries below that carry version numbers are the historical record from before the switch.
 
+## 2026-07-19 — skills-in-progress opens with the discovery-wayfinder handoff
+
+First occupant of the `oolio-pm/skills-in-progress/` lifecycle directory: `discovery-wayfinder/HANDOFF.md`, a self-contained design brief for building the skill in a fresh session. It captures the source concepts from Matt Pocock's Wayfinder (plan-don't-do, the map as index, fog of war, HITL/AFK ticket types, one decision per session), the Oolio adaptation (discovery themes charted as Jira maps of decision tickets, typed tickets routed to storm-research/signal-radar/grill-me, output feeding the existing intake and loop skills), the open Jira-modelling decisions to grill Niel on, and the promotion bar. A `skills-in-progress/README.md` documents the folder's rules. Skill count unchanged (nothing here ships until promoted).
+
 ## 2026-07-19 — Skill craft iteration: pm-compass, the skill standard, lifecycle statuses, vault alignment
 
 An iteration on how the skills themselves are built, drawing on a deep review of Matt Pocock's skills repo (the `writing-great-skills` discipline, the `ask-matt` router, directory-based lifecycle, engine/wrapper composition) and on direct access to the real brain vault (`my_brain`), whose conventions the research skills now match exactly.
