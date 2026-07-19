@@ -6,7 +6,7 @@ All notable changes to the **oolio-pm** plugin, newest first. The plugin is vers
 
 Skills that create or triage Jira work (issues, epics, initiatives, ideas, incidents, orphan tasks) had no shared way to set the Team field correctly: the field stores an Atlassian team ID (a UUID), not a name. `references/jira-teams.md` is now the canonical map: eleven teams with their IDs, what each team actually owns (often wider than the name suggests, so the rule is match on domain, not name), routing hints, and the guard that a skill leaves the field unset and flags it rather than guessing.
 
-- Known gaps recorded in the file rather than papered over: two teams share the MEL 3 prefix (needs confirming), the location-code reading of the prefixes is unconfirmed, the list is not exhaustive, and there are no leads, members or team-to-project mappings yet.
+- Known gaps recorded in the file rather than papered over: the list is not exhaustive, and there are no leads, members or team-to-project mappings yet. Two flags raised at first publish were resolved by Niel the same day: Oolio Pay is MEL 2 (the duplicate MEL 3 was a numbering slip), and the prefixes are confirmed home bases (MEL Melbourne, IN India, VN Vietnam; hybrid-location teams such as DATA and eComm carry no geo prefix).
 - A summary register mirrors it in the vault at `_system/Jira Register/Jira Teams.md`, beside the project register, with the vault README linking the two ("projects say where a ticket lives, teams say who owns it").
 - Skill count unchanged (a reference, not a skill). Not mirrored to the PM Skills page (internal reference, per the mirroring rule).
 

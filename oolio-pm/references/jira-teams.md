@@ -12,10 +12,12 @@ This is a starting point, not an org chart. It carries what a skill needs to ass
 
 ## The teams
 
+Prefixes are home bases: MEL is Melbourne, IN is India, VN is Vietnam. Teams with hybrid locations, such as DATA and eComm, carry no geo prefix.
+
 | Team | Atlassian team ID |
 |---|---|
 | MEL 1 \| Integration | `cee9b57a-0e55-433c-9c32-f618d0983f3b` |
-| MEL 3 \| Oolio Pay | `df0244f7-a388-4b94-8146-0094ef640cf6` |
+| MEL 2 \| Oolio Pay | `df0244f7-a388-4b94-8146-0094ef640cf6` |
 | MEL 3 \| Loyalty & Engagement | `0e1c1b45-ec2c-46e1-a020-8c0f175a4962` |
 | DATA | `59687059-e14b-41ea-8ab7-356c31a747ba` |
 | Platform / DevOps | `973b2986-25f2-45d7-8138-1cb7aa83eefb` |
@@ -32,7 +34,7 @@ This is a starting point, not an org chart. It carries what a skill needs to ass
 
 Manages both integrations and partners. An integration is Oolio working with a third-party API to bring data into the Oolio world; a partner works the other way, using Oolio's APIs and SDKs to fetch data out. Both sides of that boundary belong here.
 
-### MEL 3 | Oolio Pay
+### MEL 2 | Oolio Pay
 
 The payments team. Not generally formed as part of Oolio 1: Oolio 1 uses Oolio Pay, and so do all the other brands in the group suite. It runs its own projects, software projects, Confluence space, support team and product teams, so route Pay work to Pay rather than to an Oolio 1 product team.
 
@@ -77,7 +79,7 @@ More than products: product catalogues, price lists and price list publishing, s
 | The work smells like | Assign |
 |---|---|
 | Third-party data coming in, or partners using our APIs and SDKs | MEL 1 \| Integration |
-| Payments, across any brand in the group | MEL 3 \| Oolio Pay |
+| Payments, across any brand in the group | MEL 2 \| Oolio Pay |
 | Loyalty, rewards, member and customer communications, campaigns | MEL 3 \| Loyalty & Engagement |
 | The warehouse, internal analytics, data infrastructure | DATA |
 | Infrastructure, Terraform, Kubernetes, CI/CD | Platform / DevOps |
@@ -90,8 +92,6 @@ More than products: product catalogues, price lists and price list publishing, s
 
 ## Known gaps
 
-- Two teams carry the MEL 3 prefix (Oolio Pay, and Loyalty & Engagement). That may be a numbering slip in the source; confirm before treating the prefixes as unique.
-- The prefixes read like home-base codes (MEL, IN, VN) but that interpretation is unconfirmed; do not rely on it.
 - The list is not exhaustive. Teams outside these eleven (design, QA, squad boards and others) are not yet registered; absence here does not mean a team does not exist.
 - No leads or members yet. People live in the vault's People Directory (PDI-54), not here.
 - No team-to-Jira-project mapping yet. The vault's Jira Register maps projects; joining the two is a known next step.
