@@ -2,6 +2,13 @@
 
 All notable changes to the **oolio-pm** plugin, newest first. The plugin is versioned **by git commit** (there is no `version` field in the manifests, by design), so new entries are dated rather than numbered. Every change updates this file (see [CLAUDE.md](CLAUDE.md)). Entries below that carry version numbers are the historical record from before the switch.
 
+## 2026-07-20 — PM Skills Confluence page gains a plain-English changelog; mirroring becomes a maintenance step
+
+The PM Skills page (the team-facing front door, Niel's space) now ends with a "Skills changelog" section: the full history condensed into dated, human-readable entries with the skill count at each point, so teammates can see what arrived when without opening GitHub. The repo CHANGELOG remains the technical record; the page entry is the reader's version.
+
+- The page was also brought current in the same pass: 25 skills, `add-insight` and `discovery-wayfinder` in the intake table, two roadmap items flipped to Shipped (wayfinder; native JPD evidence cards), and the install note corrected to reflect PUBLISHING.md (auto-update is the Claude Code path; Cowork has the zip fallback).
+- **CLAUDE.md** gains a step: team-visible changes (new/renamed skills, new capabilities, behaviour a user would notice) are mirrored to the page's tables and changelog section; internal refactors are not.
+
 ## 2026-07-20 — New skill: add-insight (the evidence-first attach)
 
 The morning's route flip made native Insights creatable; this closes the workflow gap it exposed. Every existing path starts from an idea (`signal-radar` idea mode) or from customer signal (`feedback-to-idea`); nothing started from the evidence itself — "here's something useful I found, which ideas does it belong to?" — with multi-idea attach.
