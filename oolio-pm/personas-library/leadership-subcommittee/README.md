@@ -14,6 +14,12 @@ The Product Council Chair used to sit in this group. The Chair has been elevated
 
 ---
 
+## The Behavioural Alchemist is convened here, not filed here
+
+Roy, the Behavioural Alchemist (`../behavioural-alchemist.md`), is the other elevated role. He is not a member of this subcommittee, for the same reason the Chair is not: his remit spans all three panels. But this is the panel he visits most often, because pricing, packaging, positioning, and "is the reward valuable or merely expensive" are commercial questions. Convene him as a conditional seat when the decision touches his ground, using the row in the conditional table below. He argues perceived value against the CFO's cost discipline and against the Data and Analytics Lead's measurable evidence, and the panel is sharper for it.
+
+---
+
 ## The members
 
 | Lens | What they bring | Membership | File |
@@ -68,6 +74,7 @@ Only convene these lenses when the decision actually touches their ground. Pulli
 | Legal, Risk and Compliance Lead | The decision touches privacy, tax, payroll, payments, regulated reporting, contracts, or accessibility. |
 | Security Lead | The decision touches permissions, authentication, APIs, sensitive data, audit logs, or admin controls. |
 | Payments Risk Lead | The decision touches money movement, payment flows, refunds, settlement, or Oolio Pay. |
+| Behavioural Alchemist (Roy) | The decision touches pricing, loyalty, positioning or naming, packaging, retention, or the felt experience of a merchant, staff member, or diner. The elevated cross-cutting lens; see `../behavioural-alchemist.md`. |
 
 ---
 

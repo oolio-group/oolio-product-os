@@ -37,6 +37,12 @@ A named panel of lenses fixes this. When a reviewer says "I do not like this", t
 
 ---
 
+## The Behavioural Alchemist, a cross-cutting contextual lens
+
+Beyond the fourteen, one more lens can be convened here: Roy, the Behavioural Alchemist (`../behavioural-alchemist.md`). He is elevated and cross-cutting, not a standing member of this council, but on the design surfaces where perception is the product he earns a contextual seat. Pull him in on loyalty and engagement mechanics, guest-facing kiosk and ordering flows, onboarding and empty states, anything where the felt experience, a wait, a moment of reassurance, a sense of status, matters as much as the task. He pairs with Aarron Walter on delight and trust, and argues with Norman and Nielsen about when friction is a fault and when it is the point. Do not convene him on a pure back-office reporting or configuration screen; there is no perceived-value angle to add.
+
+---
+
 ## How to run a Design Council review
 
 Do not run every feature through every lens. Fourteen lenses on one feature is theatre, and it produces a contradictory mess no squad can act on. Assign **three mandatory lenses** and **two contextual lenses** per feature. Five voices, chosen for the surface.

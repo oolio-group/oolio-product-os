@@ -4,7 +4,7 @@ The Oolio persona library. The source of truth for who we build for, who we sell
 
 These are not marketing avatars. They are working references used in product decisions, executive decks, GTM material, roadmap discussions, and customer research. Treat them as real people the business has committed to understand.
 
-The library is the persona side of the **Oolio Virtual Product Council**, our system for stress-testing a decision from every angle that matters before it is committed. It holds four subcommittees, one elevated Chair, and supporting reference sets. The **Operator Council** (the UAT panel of user personas) answers "would our real users accept this". The **Design Council** of expert lenses answers "is the design sound by expert principles". The **Leadership Subcommittee** of executive and commercial lenses answers "should we invest in this, and can we sell, support and deliver it". The **STORM Subcommittee** of research lenses answers "have we researched this widely and grounded it in real sources before we argue". The **Product Council Chair** sits above all of them, on every subcommittee, and chairs the master council when they convene. A serious decision should be researched by STORM and then survive the other three: the reality of the hospitality personas, the scrutiny of the expert lenses, and the discipline of the commercial table. A review is a loop, not a single pass. It runs until it meets the success criteria defined up front, verified and checked, before a named human validates it. How that works is in `CLAUDE.md`, under "Done is defined, verified, and checked".
+The library is the persona side of the **Oolio Virtual Product Council**, our system for stress-testing a decision from every angle that matters before it is committed. It holds four subcommittees, one elevated Chair, and supporting reference sets. The **Operator Council** (the UAT panel of user personas) answers "would our real users accept this". The **Design Council** of expert lenses answers "is the design sound by expert principles". The **Leadership Subcommittee** of executive and commercial lenses answers "should we invest in this, and can we sell, support and deliver it". The **STORM Subcommittee** of research lenses answers "have we researched this widely and grounded it in real sources before we argue". The **Product Council Chair** sits above all of them, on every subcommittee, and chairs the master council when they convene. The **Behavioural Alchemist** (summoned as Roy) is elevated in the same way, a cross-cutting lens convened into any panel when a decision touches perceived value, pricing, loyalty, positioning, or the felt experience of a merchant, a member of staff, or a diner. A serious decision should be researched by STORM and then survive the other three: the reality of the hospitality personas, the scrutiny of the expert lenses, and the discipline of the commercial table. A review is a loop, not a single pass. It runs until it meets the success criteria defined up front, verified and checked, before a named human validates it. How that works is in `CLAUDE.md`, under "Done is defined, verified, and checked".
 
 New to the folder, or running an admin pass over it? Read `CLAUDE.md` first. It is the operating guide for how this library is built and how it grows.
 
@@ -49,6 +49,7 @@ personas/
 ├── CLAUDE.md                   how to use this folder. read this first.
 ├── personas.md                 this file. the index and the rules.
 ├── product-council-chair.md    the elevated Chair. sits on every subcommittee.
+├── behavioural-alchemist.md    the elevated cross-cutting lens (Roy). convened on any subcommittee.
 ├── segments.md                 cross-cutting map: personas by segment and vertical
 ├── _framework/
 │   ├── oolio-context.md        what Oolio is and what Oolio wants to be
@@ -75,14 +76,15 @@ personas/
     └── organisations/          retired. business-level view now in segments.md
 ```
 
-Four subcommittees, one elevated Chair, and a cross-cutting map:
+Four subcommittees, one elevated Chair, one elevated cross-cutting lens, and a cross-cutting map:
 
 1. **Operator Council (UAT panel).** The hospitality user personas: individual human users of Oolio's products and services, grouped by role (owners and executives, general managers, front of house, back of house). This is our user-acceptance lens, and where almost all current user personas live. See `uat-panel/README.md`.
 2. **Design Council.** Expert lenses, inspired by the published work of real design and research practitioners, used to attack every new feature before it ships. These are not people we build for, they are design philosophies we validate against, chosen to disagree with each other. See `design-council/README.md`.
 3. **Leadership Subcommittee.** Executive and commercial lenses (CPO, CEO, CFO, CRO, and the functional leads) that judge whether a direction is worth investing in, and whether it can be sold, supported, and delivered. These are role lenses, not named individuals. See `leadership-subcommittee/README.md`.
 4. **STORM Subcommittee.** The council's research arm, modelled on the Stanford OVAL STORM and Co-STORM method. Where the other three test a decision, STORM researches it first: it discovers perspectives, grounds claims in real sources, and surfaces the unknown unknowns, then hands the Chair a cited briefing so the testing panels argue from evidence. This is now run by the **`storm-research` skill**; the original five Co-STORM role files are archived in `../_archive/storm-subcommittee/`.
 5. **Product Council Chair.** The elevated role that sits on every subcommittee, adjudicates the master council, and turns the argument into a decision record. Not filed inside any subcommittee. See `product-council-chair.md`.
-6. **Segments and verticals.** The cross-cutting map. Personas live once by role in the UAT panel, and `segments.md` pulls them through by size-segment (independent, small group, mid-market, enterprise) and by vertical (cafe, fine dining, pub, QSR, and so on). It also shows the coverage gaps and maps to the JPD business-segment field. See `segments.md`.
+6. **The Behavioural Alchemist (Roy).** The elevated cross-cutting lens. Also not filed inside any subcommittee, because his remit (perceived value, pricing, loyalty, positioning, felt experience) lands on all three testing panels. Convened as a conditional seat when a decision touches his ground, and summonable on his own through the `behavioural-alchemist` skill. See `behavioural-alchemist.md`.
+7. **Segments and verticals.** The cross-cutting map. Personas live once by role in the UAT panel, and `segments.md` pulls them through by size-segment (independent, small group, mid-market, enterprise) and by vertical (cafe, fine dining, pub, QSR, and so on). It also shows the coverage gaps and maps to the JPD business-segment field. See `segments.md`.
 
 The `organisations/` folder was retired on 2026-06-24 and moved to `_archive/`. The business-level view of the customer is now the owner and executive personas plus `segments.md`, not a separate organisation-persona type.
 
@@ -101,6 +103,7 @@ The standing vocabulary for calling the panels. Use these terms and the right gr
 | **"Leadership Subcommittee"**, "the leadership panel", "the commercial table", "the exec lenses" | The default nine leadership lenses plus the Chair (`leadership-subcommittee/`), and any conditional lenses the decision touches |
 | **"STORM"**, "the STORM Subcommittee", "research this", "ground this", "what are we missing" | The `storm-research` skill, run as the research loop before the testing panels |
 | **"the Chair"**, "the Product Council Chair", "the adjudicator" | The elevated Chair (`product-council-chair.md`), always present in any review |
+| **"Roy"**, "the Behavioural Alchemist", "the behavioural lens", "the contrarian" | The elevated cross-cutting lens (`behavioural-alchemist.md`), convened when a decision touches perceived value, pricing, loyalty, positioning, or felt experience |
 | **"the master council"**, "the town hall", "full council" | All four subcommittees together, chaired by the Product Council Chair |
 | **"both"**, "personas", "everyone", "the full library", "full review" | All four subcommittees together, plus the Chair |
 | "back of house" / "BOH" | `uat-panel/back-of-house/` |

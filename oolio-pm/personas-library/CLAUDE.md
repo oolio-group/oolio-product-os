@@ -27,6 +27,7 @@ personas/
 ├── CLAUDE.md                       this file. how to use the folder.
 ├── personas.md                     the index and the house rules.
 ├── product-council-chair.md        the elevated Chair. sits on every subcommittee.
+├── behavioural-alchemist.md        the elevated cross-cutting lens (Roy). convened on any subcommittee.
 ├── segments.md                     cross-cutting map. personas by segment and vertical.
 │
 ├── _framework/                     shared reference for all subcommittees
@@ -81,6 +82,14 @@ The Product Council Chair (`product-council-chair.md`) is deliberately not filed
 This separation is the point. If the Chair were just another member of the Leadership Subcommittee, the role that resolves trade-offs across the whole system would be trapped inside one face of it. By lifting the Chair out, the role can do its actual job: run the process, force clarity, surface where lenses disagree, and convert discussion into a decision, a confidence rating, the PRD edits, and the escalation points.
 
 When you convene any review, the Chair is always in the room.
+
+---
+
+## The Behavioural Alchemist travels with them
+
+The Behavioural Alchemist (`behavioural-alchemist.md`), summoned as **Roy**, is the second role kept out of any single subcommittee, and for the same reason the Chair is. His remit, perceived value, framing, loyalty, pricing, positioning, and the felt experience of merchants, staff, and diners, lands on all three panels at once. File him inside Leadership and he could not challenge a Design Council clash about friction, or an Operator Council read of a Friday-night queue. So he sits here, elevated, and is convened into whichever panel a decision needs.
+
+He is not the Chair, and does not adjudicate. The Chair converts argument into a decision. Roy is a provocateur and a lens: he keeps the credible irrational option alive long enough to be tested, insists perceived value is real value, and asks whether a cheap change in perception would beat an expensive change in reality. He is a **conditional** seat, not a default one, convened when a decision touches pricing, loyalty, positioning or naming, packaging, retention, or felt experience, so he does not turn every review into theatre. He is also a lens of the same kind as the Design Council, inspired by the published work of a real practitioner (Rory Sutherland) and never given invented quotes. He can be summoned on his own, outside any council, through the `behavioural-alchemist` skill.
 
 ---
 

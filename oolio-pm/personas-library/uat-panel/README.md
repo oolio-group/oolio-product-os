@@ -4,6 +4,8 @@ The hospitality user personas. Individual human users of Oolio products and serv
 
 This is the primary persona type in the library today. Almost every product decision, GTM artifact, and consultancy engagement touches one of these personas. The UAT panel works as a pair with the [Design Council](../design-council/README.md): the UAT panel asks "would our real users accept this on a Friday night", the Council asks "is the design sound by expert principles". A feature has to satisfy both.
 
+These personas answer whether a user would accept a feature. Roy, the Behavioural Alchemist (`../behavioural-alchemist.md`), the elevated cross-cutting lens, can be convened alongside them to ask a different question: what is the user actually *experiencing*. Where a persona says the kitchen queue is too slow, Roy asks whether the real problem is the diner's anxiety about whether the order landed, or the new casual's fear of looking incompetent at the till, and whether a cheap change in perception would beat an expensive change in the workflow. Convene him when the felt, emotional, or social side of the experience is where the value or the risk sits.
+
 ---
 
 ## Categories

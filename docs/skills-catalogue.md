@@ -1,6 +1,6 @@
 # Oolio PM — Skills Catalogue
 
-The plugin ships **26 skills**, organised here by where they sit in the product lifecycle,
+The plugin ships **27 skills**, organised here by where they sit in the product lifecycle,
 signal to shipped. The folders under `oolio-pm/skills/` stay flat (that is what the Claude
 Code plugin loader expects). This document is the map; the categories are a reading aid, not
 a folder structure.
@@ -23,7 +23,7 @@ per-skill version numbers, by design — the plugin versions by commit.
 | 0 | Start here | Find the right skill, or drive any task to done | 2 |
 | 1 | Intake & Discovery | Turn raw signal into shaped, groomed ideas | 10 |
 | 2 | Specs & PRDs | Shape ideas into written, pressure-tested specs | 3 |
-| 3 | Validation & Councils | Test decisions against the Virtual Product Council | 4 |
+| 3 | Validation & Councils | Test decisions against the Virtual Product Council | 5 |
 | 4 | Delivery & Steering | Jira hygiene and executive-facing packs | 3 |
 | 5 | GTM | Take a launch to market | 3 |
 | 6 | Analysis | Close the loop after launch | 1 |
@@ -66,6 +66,7 @@ Pressure-test a decision against the Virtual Product Council and its expert lens
 - **design-council-review** — Review a design against the Design Council, the panel of expert design and research lenses.
 - **operator-council-review** — Test a decision against the Operator Council, the hospitality user personas (the UAT panel).
 - **leadership-subcommittee-review** — Test a decision against the Leadership Subcommittee, the executive and commercial lenses.
+- **behavioural-alchemist** *(New, July 2026)* — Summon Roy, the Behavioural Alchemist: read a decision, feature, price, loyalty scheme, or positioning through behavioural economics, and find the perceived-value, contrarian, and disproportionate-intervention angles the rational lenses miss. Also sits as an elevated cross-cutting lens inside the council (`personas-library/behavioural-alchemist.md`); this skill summons him standalone.
 
 ## 4. Delivery & Steering
 

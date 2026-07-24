@@ -54,6 +54,7 @@ A single Cowork plugin bundling Oolio's product-management skills. Install it on
 **Thinking partners**
 
 - `grill-me` — interviews you relentlessly about a plan, decision, or design until every branch of the decision tree is resolved. For Confluence PRDs, prefer `grill-my-prd`.
+- `behavioural-alchemist` — summons Roy, the Behavioural Alchemist: reads a decision, feature, price, loyalty scheme, or piece of positioning through behavioural economics and consumer psychology, and finds the perceived-value, contrarian, and disproportionate-intervention angles the rational lenses miss. Ten modes, from Pricing Psychology to Loyalty Architect to Experiment Designer. Also sits as an elevated cross-cutting lens inside the Virtual Product Council (`personas-library/behavioural-alchemist.md`); this skill is how you summon him on his own.
 
 **Product context**
 
