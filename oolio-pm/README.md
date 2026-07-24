@@ -7,6 +7,7 @@ A single Cowork plugin bundling Oolio's product-management skills. Install it on
 **Start here**
 
 - `pm-compass` — the router: describe the task in plain English and it names the one skill (or short chain) that fits, and gives newcomers the two-minute picture.
+- `drive` — the driver: hand it a raw, rambling, or voice-dictated request and it works out the real outcome, turns it into a clear execution contract, then plans, does, verifies, and hands back the finished result rather than advice. Invoke with `/drive`. Where `pm-compass` routes you to a skill, `drive` executes the task itself.
 
 **Discovery and grooming**
 

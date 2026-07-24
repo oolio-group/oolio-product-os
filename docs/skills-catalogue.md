@@ -1,6 +1,6 @@
 # Oolio PM — Skills Catalogue
 
-The plugin ships **25 skills**, organised here by where they sit in the product lifecycle,
+The plugin ships **26 skills**, organised here by where they sit in the product lifecycle,
 signal to shipped. The folders under `oolio-pm/skills/` stay flat (that is what the Claude
 Code plugin loader expects). This document is the map; the categories are a reading aid, not
 a folder structure.
@@ -20,7 +20,7 @@ per-skill version numbers, by design — the plugin versions by commit.
 
 | # | Stage | What it is for | Skills |
 |---|-------|----------------|--------|
-| 0 | Start here | Find the right skill | 1 |
+| 0 | Start here | Find the right skill, or drive any task to done | 2 |
 | 1 | Intake & Discovery | Turn raw signal into shaped, groomed ideas | 10 |
 | 2 | Specs & PRDs | Shape ideas into written, pressure-tested specs | 3 |
 | 3 | Validation & Councils | Test decisions against the Virtual Product Council | 4 |
@@ -33,6 +33,7 @@ per-skill version numbers, by design — the plugin versions by commit.
 ## 0. Start here
 
 - **pm-compass** *(New, July 2026)* — The router: describe the task, get the one skill (or short chain) that fits, and the pipeline picture for newcomers.
+- **drive** *(New, July 2026)* — The driver: take a raw, rambling, or voice-dictated request, turn it into a clear execution contract (objective, done-when, constraints), then plan, do, verify, and hand back the finished result rather than advice. The generalist front door for any task that does not yet have a shaped brief; `pm-compass` routes, `drive` executes.
 
 ## 1. Intake & Discovery
 
